@@ -23,7 +23,7 @@ const LeftArrow = () => {
       </Typography>
     );
   };
-const HorizontalScrollbar = ({data, bodyPart, setBodyPart}) => {
+const HorizontalScrollbar = ({data, bodyParts, setBodyPart, bodyPart}) => {
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {data.map((item) => (
@@ -35,8 +35,8 @@ const HorizontalScrollbar = ({data, bodyPart, setBodyPart}) => {
             >
                 <BodyPart
                     item={item}
-                    BodyPart={bodyPart}
                     setBodyPart={setBodyPart}
+                    bodyPart={bodyPart}
                 />
             </Box>
         ))}
